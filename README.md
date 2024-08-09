@@ -1,10 +1,10 @@
 # SwipeAssignment Project
 
-Welcome to the SwipeAssignment Project! This repository contains both the front-end and back-end code for SwipeAssignment, a comprehensive solution for parsing PDFs and extracting specific details using AI-generated content.
+Welcome to the SwipeAssignment Project! This repository contains both the front-end and back-end code for SwipeAssignment, a comprehensive solution for parsing PDFs and Images and extracting specific details using AI-generated content.
 
 ## Overview
 
-The SwipeAssignment project is designed to streamline the process of extracting specific details from PDFs. This project leverages the power of the Google Generative AI (Gemini 1.5 Pro) model, with all operations handled on the server side to ensure seamless and efficient processing.
+The SwipeAssignment project is designed to streamline the process of extracting specific details from PDFs and Images. This project leverages the power of the Google Generative AI (Gemini 1.5 Pro) model, with all operations handled on the server side to ensure seamless and efficient processing.
 
 ### Project Structure
 
@@ -17,11 +17,12 @@ The SwipeAssignment project is designed to streamline the process of extracting 
 - **Front-end**: React
 - **LLM API**: Google Generative AI (Gemini 1.5 Pro)
 - **PDF Parsing**: pdf-parse
+- **IMAGE Parsing**: tesseract.js
 - **File Upload**: express-fileupload
-- **Deployment**: Backend is deployed on Render.com && Frontend is Deployed on Netlify(https://playful-yeot-56179d.netlify.app/)
+- **Deployment**: Backend is deployed on Render.com && Frontend is Deployed on Netlify(https://swipe-data-extraction.netlify.app)
 
 ## Features
 
-- **LLM Integration**: Utilizes the Google Generative AI (Gemini 1.5 Pro) model for accurate extraction of structured data from unstructured PDF content.
+- **LLM Integration**: Utilizes the Google Generative AI (Gemini 1.5 Pro) model to accurately extract structured data from PDF and Image content.
 - **Server-Side Processing**: All processing is handled server-side, ensuring efficiency and scalability for large volumes of PDFs.
 - **Robust Parsing**: Capable of handling various PDF formats and layouts.
