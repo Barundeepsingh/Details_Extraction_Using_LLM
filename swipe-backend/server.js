@@ -10,7 +10,7 @@ app.use(cors());
 app.use(fileUpload());
 
 //Google Generative AI API key
-console.log("apiKey", process.env.API_KEY);
+//console.log("apiKey", process.env.API_KEY);
 const genAi = new GoogleGenerativeAI(process.env.API_KEY);
 
 // Setting Generative Model
