@@ -24,7 +24,7 @@ function PDFUploader() {
     formData.append('pdf', selectedFile);
 
     try {
-      const response = await axios.post('http://localhost:3001/upload', formData, {
+      const response = await axios.post('https://details-extraction-using-llm.onrender.com/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
