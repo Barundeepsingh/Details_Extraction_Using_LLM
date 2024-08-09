@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './PdfToText.css';
 
-function PDFUploader() {
+function FileUploader() {
   const [extractedInfo, setExtractedInfo] = useState('');
   const [selectedFile, setSelectedFile] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -14,14 +14,14 @@ function PDFUploader() {
 
   const handleUpload = async () => {
     if (!selectedFile) {
-      alert('Please select a PDF file to upload.');
+      alert('Please select a PDF or image file to upload.');
       return;
     }
 
     setIsLoading(true);
 
     const formData = new FormData();
-    formData.append('pdf', selectedFile);
+    formData.append('file', selectedFile); // Changed 'pdf' to 'file' for general file type handling
 
     try {
       const response = await axios.post('http://localhost:3001/upload', formData, {
@@ -46,13 +46,13 @@ function PDFUploader() {
 
   return (
     <div className="container">
-      <h1>Upload a PDF to Extract Text</h1>
+      <h1>Upload a PDF or Image to Extract Text</h1>
       <div className="upload-box" onClick={() => document.getElementById('fileInput').click()}>
         <input
           type="file"
           id="fileInput"
           onChange={handleFileChange}
-          accept="application/pdf"
+          accept="application/pdf,image/*" // Accept both PDF and image files
         />
         {selectedFile ? <p>{selectedFile.name}</p> : <p>Click to select a file</p>}
       </div>
@@ -70,4 +70,4 @@ function PDFUploader() {
   );
 }
 
-export default PDFUploader;
+export default FileUploader;
