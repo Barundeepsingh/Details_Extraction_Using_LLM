@@ -3,13 +3,15 @@ const fileUpload = require('express-fileupload');
 const pdfParse = require('pdf-parse');
 const cors = require('cors');
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+require('dotenv').config();
 
 const app = express();
 app.use(cors());
 app.use(fileUpload());
 
 //Google Generative AI API key
-const genAi = new GoogleGenerativeAI('AIzaSyAoNZ7O3afkTbU112lutRElXHIJuDni32g');
+console.log("apiKey", process.env.API_KEY);
+const genAi = new GoogleGenerativeAI(process.env.API_KEY);
 
 // Setting Generative Model
 const geminiModel = genAi.getGenerativeModel({ model: "gemini-1.5-pro" });
