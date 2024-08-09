@@ -21,10 +21,10 @@ function FileUploader() {
     setIsLoading(true);
 
     const formData = new FormData();
-    formData.append('file', selectedFile); // Changed 'pdf' to 'file' for general file type handling
+    formData.append('file', selectedFile); 
 
     try {
-      const response = await axios.post('http://localhost:3001/upload', formData, {
+      const response = await axios.post('https://details-extraction-using-llm.onrender.com/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
