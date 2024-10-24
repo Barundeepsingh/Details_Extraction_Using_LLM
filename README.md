@@ -1,4 +1,4 @@
-# SwipeAssignment Project
+# Details_Extraction_Using_LLM Project
 
 Welcome to the SwipeAssignment Project! This repository contains both the front-end and back-end code for SwipeAssignment, a comprehensive solution for parsing PDFs and Images and extracting specific details using AI-generated content.
 
